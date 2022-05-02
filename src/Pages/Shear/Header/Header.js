@@ -1,12 +1,18 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-
+import logo from "../../../image/loader-img.gif";
+import "./Header.css";
 const Header = () => {
   return (
     <div>
       <Navbar className="ps-5 pe-5 text-center" bg="light" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+          <Navbar.Brand href="#">
+            <a className="d-flex align-items-center " href="#">
+              <img height={60} src={logo} alt="" />
+              <div className="logo-infro"> Bookly</div>
+            </a>
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
