@@ -7,13 +7,6 @@
  .banar{
      padding: 5rem 9%;
  }
-  .row{
-     display: flex;
-     flex-wrap: wrap;
-     align-items: center;
-     gap: 1.5rem;
- }
-
  .content{
      flex: 1 1 42rem;
  }
