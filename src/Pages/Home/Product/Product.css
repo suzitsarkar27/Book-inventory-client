@@ -3,4 +3,19 @@
     border-radius: 8px;
     height:500px;
     width: 350px;
+    position: relative;
+    transition: .5s;
+}
+
+.product-container:hover{
+  transform: scale(.9);
+}
+.Product-btn{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.Product-infro{
+    margin-top: -50px;
 }
