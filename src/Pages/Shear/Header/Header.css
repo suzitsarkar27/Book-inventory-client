@@ -5,3 +5,8 @@
     font-weight: 700;
     margin-left: 10px;
 }
+.heaser-nav:hover{
+   border-bottom: 2px solid gray;
+}
+
+

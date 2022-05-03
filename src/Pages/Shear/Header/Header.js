@@ -22,11 +22,24 @@ const Header = () => {
               navbarScroll
             ></Nav>
 
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <Nav.Link as={Link} to={"/login"} href="#link">
+            <Nav.Link className="heaser-nav" href="#action1">
+              Home
+            </Nav.Link>
+            <Nav.Link className="heaser-nav" href="#action2">
+              Link
+            </Nav.Link>
+            <Nav.Link className="heaser-nav" href="#home">
+              Home
+            </Nav.Link>
+            <Nav.Link className="heaser-nav" href="#link">
+              Link
+            </Nav.Link>
+            <Nav.Link
+              className="heaser-nav"
+              as={Link}
+              to={"/login"}
+              href="#link"
+            >
               Login
             </Nav.Link>
           </Navbar.Collapse>

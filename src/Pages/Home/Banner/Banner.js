@@ -14,7 +14,7 @@ const Banner = () => {
   return (
     <div className="banar ">
       <div className=" row align-items-center">
-        <div className="content ">
+        <div className="content mb-5 col-md-6">
           <h2>Get You New</h2>
           <h2>Book Collections</h2>
           <p>
@@ -26,7 +26,7 @@ const Banner = () => {
           </Button>
         </div>
 
-        <div className="swiper mySwiper book-slider ">
+        <div className="swiper mySwiper book-slider col-md-6">
           <div className="swiper-wrapper"></div>
           <Carousel>
             <Carousel.Item>

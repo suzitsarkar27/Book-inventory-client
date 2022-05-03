@@ -1,10 +1,11 @@
 import React from "react";
 import { FaFacebookF, FaGoogle, FaInstagram, FaTwitter } from "react-icons/fa";
+import "./Footer.css";
 const Footer = () => {
   const today = new Date();
   const year = today.getFullYear();
   return (
-    <footer className="bg-black text-white ">
+    <footer className="footer-bg text-white ">
       <div className="d-flex justify-content-center container">
         <div className="row">
           <div className="col-md-6">
@@ -30,7 +31,7 @@ const Footer = () => {
             <h5>Advance Search</h5>
             <h5>Helps & Faqs</h5>
             <h5>Store Location</h5>
-            <h5>Orders & RETURNS</h5>
+            <h5>Orders & Returens</h5>
           </div>
 
           <div className="col-md-6">
