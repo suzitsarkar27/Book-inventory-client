@@ -1,22 +1,32 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
+import "./Login.css";
 const Login = () => {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm();
+  const { register, handleSubmit } = useForm();
   const onSubmit = (data) => console.log(data);
-
   return (
-    <div className="d-flex">
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input {...register("firstName", { required: true, maxLength: 20 })} />
-        <input {...register("lastName", { pattern: /^[A-Za-z]+$/i })} />
-        <input type="number" {...register("age", { min: 18, max: 99 })} />
+    <div className="Form-design mb-5 mt-5 mx-auto text-center">
+      <h2 className="text-center">Login From</h2>
+      <form
+        className="d-flex flex-column input-filde"
+        onSubmit={handleSubmit(onSubmit)}
+      >
+        <input placeholder="Type Your Email" {...register("email")} required />
+        <input
+          placeholder="Type Your Email"
+          {...register("password")}
+          required
+        />
         <input type="submit" />
       </form>
+      <p>
+        Plese
+        <Link to={"/singup"}>Reagister</Link>
+      </p>
+      <div className="sing-in mx-auto">
+        <input type="button" value="Sing Google" />
+      </div>
     </div>
   );
 };

@@ -1,0 +1,15 @@
+.Form-design{
+    width:300px;
+    height:350px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+}
+ .input-filde input{
+    width:250px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+} 
+.sing-in input{
+    width: 250px;
+}
+ 
