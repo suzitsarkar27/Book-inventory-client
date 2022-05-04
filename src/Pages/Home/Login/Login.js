@@ -1,10 +1,13 @@
 import React from "react";
+import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import auth from "../../Firebase.init";
 import "./Login.css";
 const Login = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => console.log(data);
+  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
   return (
     <div className="Form-design mb-5 mt-5 mx-auto text-center">
       <h2 className="text-center mt-2 mb-3">Login From</h2>
@@ -33,10 +36,11 @@ const Login = () => {
       </div>
       <div className="sing-in mx-auto mt-4">
         <input
+          onClick={() => signInWithGoogle()}
           className="bg-primary text-white"
           type="button"
           value="Sing Google"
-        />
+        ></input>
       </div>
     </div>
   );

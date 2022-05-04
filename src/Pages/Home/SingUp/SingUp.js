@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+import {
+  useSignInWithGoogle,
+  useCreateUserWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import auth from "../../Firebase.init";
 const SingUp = () => {
+  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+  const [createUserWithEmailAndPassword] =
+    useCreateUserWithEmailAndPassword(auth);
+  const navigate = useNavigate();
+
+  if (user) {
+    navigate("/home");
+  }
+
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => createUserWithEmailAndPassword(data);
+
   return (
     <div className="Form-design mb-5 mt-5 mx-auto text-center">
       <h2 className="text-center mt-3 mb-3">Reagister Now</h2>
@@ -14,7 +28,7 @@ const SingUp = () => {
       >
         <input placeholder="Type Your Email" {...register("email")} required />
         <input
-          placeholder="Type Your Email"
+          placeholder="Type Your Password"
           {...register("password")}
           required
         />
@@ -27,7 +41,12 @@ const SingUp = () => {
         </Link>
       </p>
       <div className="sing-in mx-auto">
-        <input type="button" value="Sing Google" />
+        <input
+          className="bg-primary"
+          onClick={() => signInWithGoogle()}
+          type="button"
+          value="Sing Google"
+        />
       </div>
     </div>
   );
