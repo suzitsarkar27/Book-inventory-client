@@ -7,7 +7,7 @@ const SingUp = () => {
   const onSubmit = (data) => console.log(data);
   return (
     <div className="Form-design mb-5 mt-5 mx-auto text-center">
-      <h2 className="text-center">Reagister From</h2>
+      <h2 className="text-center mt-3 mb-3">Reagister Now</h2>
       <form
         className="d-flex flex-column input-filde"
         onSubmit={handleSubmit(onSubmit)}
@@ -20,9 +20,11 @@ const SingUp = () => {
         />
         <input type="submit" />
       </form>
-      <p>
-        Plese
-        <Link to={"/login"}>Reagister</Link>
+      <p className="infro">
+        All ready have a account
+        <Link className="text-decoration-none" to={"/login"}>
+          Login
+        </Link>
       </p>
       <div className="sing-in mx-auto">
         <input type="button" value="Sing Google" />

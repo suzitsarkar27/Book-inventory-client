@@ -1,15 +1,31 @@
 .Form-design{
-    width:300px;
-    height:350px;
+    width:350px;
+    height:500px;
     border: 1px solid lightgray;
     border-radius: 8px;
 }
  .input-filde input{
-    width:250px;
+    width:300px;
     margin: 0 auto;
     margin-bottom: 20px;
+    height:40px;
 } 
 .sing-in input{
-    width: 250px;
+    width:300px;
+    height: 40px;
 }
- 
+.infro{
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 30px;
+}
+.from-border{
+    display:flex;
+  
+}
+.login-border{
+    width: 140px;
+    height: 1px;
+    background-color: gray;
+    margin: 5px;
+}

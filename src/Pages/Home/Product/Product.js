@@ -11,6 +11,11 @@ const Product = (Props) => {
           <h2>{title}</h2>
           <h2>{price}</h2>
         </p>
+        <span className="from-border">
+          <hr />
+          or
+          <hr />
+        </span>
         <button className="Product-btn">Update</button>
       </div>
     </div>
