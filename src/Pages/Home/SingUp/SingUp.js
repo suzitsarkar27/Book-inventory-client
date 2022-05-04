@@ -18,7 +18,7 @@ const SingUp = () => {
           {...register("password")}
           required
         />
-        <input type="submit" />
+        <input className="bg-primary text-white" type="submit" />
       </form>
       <p className="infro">
         All ready have a account

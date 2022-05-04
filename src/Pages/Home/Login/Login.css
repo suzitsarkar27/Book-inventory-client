@@ -7,17 +7,20 @@
  .input-filde input{
     width:300px;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     height:40px;
+    border-radius: 8px;
 } 
 .sing-in input{
     width:300px;
     height: 40px;
+    border-radius: 8px;
 }
 .infro{
     text-decoration: none;
     font-size: 20px;
     margin-top: 30px;
+   
 }
 .from-border{
     display:flex;

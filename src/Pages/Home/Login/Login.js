@@ -18,7 +18,7 @@ const Login = () => {
           {...register("password")}
           required
         />
-        <input type="submit" />
+        <input className="bg-primary text-white" type="submit" />
       </form>
       <p className="infro">
         All ready have a account
@@ -31,8 +31,12 @@ const Login = () => {
         or
         <div className="login-border"></div>
       </div>
-      <div className="sing-in mx-auto mt-5">
-        <input type="button" value="Sing Google" />
+      <div className="sing-in mx-auto mt-4">
+        <input
+          className="bg-primary text-white"
+          type="button"
+          value="Sing Google"
+        />
       </div>
     </div>
   );
