@@ -1,8 +1,13 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Product.css";
 
 const Product = (Props) => {
-  const { title, price, image } = Props.displayData;
+  const { id, title, price, image } = Props.displayData;
+  const navigate = useNavigate();
+  const navigetToProductDatalic = (id) => {
+    navigate(`/product/${id}`);
+  };
   return (
     <div className="col-md-6 col-lg-4 g-5">
       <div className="product-container text-center">
@@ -16,7 +21,12 @@ const Product = (Props) => {
           or
           <hr />
         </span>
-        <button className="Product-btn">Update</button>
+        <button
+          onClick={() => navigetToProductDatalic(id)}
+          className="Product-btn"
+        >
+          Update
+        </button>
       </div>
     </div>
   );

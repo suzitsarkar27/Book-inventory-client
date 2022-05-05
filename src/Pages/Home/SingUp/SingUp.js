@@ -20,6 +20,10 @@ const SingUp = () => {
     navigate("/login");
   };
 
+  if (user) {
+    navigate("/home");
+  }
+
   const handelSumbit = async (e) => {
     e.preventDefault();
     const email = e.target.email.value;

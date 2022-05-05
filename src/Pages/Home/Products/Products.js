@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Product from "../Product/Product";
 
 const Products = () => {
@@ -18,6 +19,13 @@ const Products = () => {
           {data.map((displayData) => (
             <Product key={displayData.id} displayData={displayData}></Product>
           ))}
+        </div>
+        <div className="manage-btn text-center mt-5">
+          <Link to={"/manageitems"}>
+            <button className="mt-5 mx-auto mb-5 bg-success py-1 px-5 rounded text-white">
+              Manage Inventory
+            </button>
+          </Link>
         </div>
       </div>
     </div>

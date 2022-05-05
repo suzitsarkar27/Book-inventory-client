@@ -29,7 +29,8 @@ const Login = () => {
   }
 
   if (user) {
-    navigate(navigate(from, { replace: true }));
+    // navigate((from, { replace: true }));
+    navigate("/home");
   }
 
   if (error) {
