@@ -18,7 +18,7 @@ const Product = (Props) => {
         </p>
         <button
           onClick={() => navigetToProductDatalic(id)}
-          className="Product-btn"
+          className="Product-btn "
         >
           Update
         </button>

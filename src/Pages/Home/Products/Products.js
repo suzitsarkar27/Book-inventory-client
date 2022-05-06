@@ -13,7 +13,7 @@ const Products = () => {
   }, []);
   return (
     <div className="container">
-      <h2 className="mt-5 mb-5 text-center">This is product</h2>
+      <h2 className="mt-5 mb-5 text-center text-info">Inventory Product </h2>
       <div>
         <div className="row">
           {data.map((displayData) => (
