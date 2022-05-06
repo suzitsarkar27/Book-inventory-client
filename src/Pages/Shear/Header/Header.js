@@ -12,8 +12,8 @@ const Header = () => {
     signOut(auth);
   };
   return (
-    <div>
-      <Navbar className="ps-5 pe-5 text-center" bg="light" expand="lg">
+    <div className="sticky-top">
+      <Navbar className="ps-5 pe-5 text-center " bg="light" expand="lg">
         <Container fluid>
           <Navbar.Brand as={Link} to={"/home"} href="#">
             <a className="d-flex align-items-center logo" href="#">
@@ -60,6 +60,14 @@ const Header = () => {
               href="#link"
             >
               My Items
+            </Nav.Link>
+            <Nav.Link
+              as={Link}
+              to={"/blogs"}
+              className="heaser-nav"
+              href="#link"
+            >
+              Blogs
             </Nav.Link>
             {user ? (
               <button

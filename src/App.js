@@ -12,6 +12,7 @@ import AddItems from "./Pages/AddItems/AddItems";
 import MyItems from "./Pages/MyItems/MyItems";
 import Manage from "./Pages/Home/Manage/Manage";
 import NotFund from "./Pages/Home/NotFound/NotFund";
+import Blogs from "./Pages/Blogs/Blogs";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
             </RequriteAuth>
           }
         ></Route>
+        <Route path="blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/singup" element={<SingUp></SingUp>}></Route>
         <Route path="*" element={<NotFund></NotFund>}></Route>
