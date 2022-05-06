@@ -1,0 +1,13 @@
+
+.react-from{
+    width:800px;
+    border: 1px solid lightgray;
+   border-radius:8px;
+}
+.react-from input{
+    margin-bottom: 20px;
+}
+.logo-img{
+ width:400px;
+ height: 100%;
+}

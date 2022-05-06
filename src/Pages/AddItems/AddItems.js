@@ -1,32 +1,48 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import logo from "../../image/login.png";
+import "./AddItems.css";
 
 const AddItems = () => {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm();
+  const { register, handleSubmit } = useForm();
   const onSubmit = (data) => console.log(data);
   return (
-    <div className="d-flex justify-content-center">
-      <h2>Thsi si add items component</h2>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <input defaultValue="test" {...register("example")} />
-          <input {...register("exampleRequired", { required: true })} />
-
-          {errors.exampleRequired && <span>This field is required</span>}
-
-          <input type="submit" />
+    <div className="react-from row mx-auto mt-5 mb-5 p-3">
+      <h2 className="text-center mb-3 mt-2 text-primary">Add New Items</h2>
+      <div className="col-md-6">
+        <img className="logo-img pe-3" src={logo} alt="" />
+      </div>
+      <div className="col-md-6">
+        <form className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
+          <label for="prosuct name">Product Name:</label>
+          <input {...register("text")} required />
+          <label for="supply name">Supply Name:</label>
+          <input {...register("text")} required />
+          <label for="email">Email:</label>
+          <input type="email" {...register("email")} required />
+          <label for="Price">Price:</label>
+          <input
+            type="number"
+            {...register("age", { min: 18, max: 99 })}
+            required
+          />
+          <label for="quantity">QUANTIRY:</label>
+          <input
+            type="number"
+            {...register("age", { min: 18, max: 99 })}
+            required
+          />
+          <label for="img">Image:</label>
+          <input type="img" {...register("img")} required />
+          <label for="textarea">Discription:</label>
+          <textarea
+            type="textarea"
+            {...register("age", { min: 18, max: 99 })}
+            required
+          />
+          <input className="mt-4 bg-primary rounded text-white" type="submit" />
         </form>
-        {/* include validation with required or other standard HTML validation rules */}
-        <input {...register("exampleRequired", { required: true })} />
-        {/* errors will return when field validation fails  */}
-        {errors.exampleRequired && <span>This field is required</span>}
-        <input type="submit" />
-      </form>
+      </div>
     </div>
   );
 };
