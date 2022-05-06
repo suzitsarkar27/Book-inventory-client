@@ -29,7 +29,12 @@ const Header = () => {
               navbarScroll
             ></Nav>
 
-            <Nav.Link className="heaser-nav" href="#action1">
+            <Nav.Link
+              as={Link}
+              to={"/home"}
+              className="heaser-nav"
+              href="#action1"
+            >
               Home
             </Nav.Link>
             <Nav.Link

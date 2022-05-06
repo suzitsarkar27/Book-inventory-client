@@ -1,0 +1,15 @@
+.product-img{
+    margin-top:-30px;
+}
+.manage-btn{
+  background-color:#636e72;
+  padding: 2px 20px;
+  border-radius: 8px;
+  color: white;
+}
+.delete-btn{
+    background-color: red;
+    padding: 2px 20px;
+    border-radius: 8px;
+    color: white;
+}

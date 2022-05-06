@@ -35,11 +35,7 @@ const AddItems = () => {
           <label for="img">Image:</label>
           <input type="img" {...register("img")} required />
           <label for="textarea">Discription:</label>
-          <textarea
-            type="textarea"
-            {...register("age", { min: 18, max: 99 })}
-            required
-          />
+          <textarea className="py-3" type="textarea" {...register} required />
           <input className="mt-4 bg-primary rounded text-white" type="submit" />
         </form>
       </div>
