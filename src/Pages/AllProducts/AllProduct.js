@@ -7,6 +7,11 @@ const AllProduct = ({ item }) => {
   const handelNavigate = (id) => {
     navigate(`/product/${id}`);
   };
+  const handelDelete = () => {
+    const proceed = window.confirm("Are you Sure?");
+    if (proceed) {
+    }
+  };
   return (
     <div className="col-md-6 col-lg-4 g-5">
       <div className="product-container text-center">
@@ -23,7 +28,9 @@ const AllProduct = ({ item }) => {
           <button onClick={() => handelNavigate(_id)} className="manage-btn">
             Manag
           </button>
-          <button className="delete-btn">Delete</button>
+          <button className="delete-btn" onClick={() => handelDelete(_id)}>
+            Delete
+          </button>
         </div>
       </div>
     </div>
