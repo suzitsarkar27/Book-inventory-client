@@ -6,7 +6,7 @@ import "./ManageItems.css";
 const ManageItems = () => {
   const [items, setItems] = useState([]);
   useEffect(() => {
-    fetch("data.json")
+    fetch("http://localhost:5000/data")
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);
@@ -16,7 +16,7 @@ const ManageItems = () => {
       <h2 className="text-center mt-5 text-primary">All Product Items</h2>
       <div className="row mb-5">
         {items.map((item) => (
-          <AllProduct key={item.id} item={item}></AllProduct>
+          <AllProduct key={item._id} item={item}></AllProduct>
         ))}
       </div>
     </div>

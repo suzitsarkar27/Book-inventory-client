@@ -7,10 +7,10 @@ import { getAuth } from "firebase/auth";
 const firebaseConfig = {
   apiKey: "AIzaSyDMtYujEH2mEStQUPcsmrU3dQWRKows3So",
   authDomain: "book-inventory-clientside.firebaseapp.com",
-  projectId: "book-inventory-clientside",
+  projectid: "book-inventory-clientside",
   storageBucket: "book-inventory-clientside.appspot.com",
-  messagingSenderId: "318729032955",
-  appId: "1:318729032955:web:bbd7a69cbcf4e1d7c24c5e",
+  messagingSenderid: "318729032955",
+  appid: "1:318729032955:web:bbd7a69cbcf4e1d7c24c5e",
 };
 
 // Initialize Firebase

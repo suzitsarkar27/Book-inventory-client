@@ -7,7 +7,7 @@ const Products = () => {
   console.log(product);
   const data = product.slice(0, 6);
   useEffect(() => {
-    fetch("data.json")
+    fetch("http://localhost:5000/data")
       .then((res) => res.json())
       .then((data) => setProsuct(data));
   }, []);
@@ -17,7 +17,7 @@ const Products = () => {
       <div>
         <div className="row">
           {data.map((displayData) => (
-            <Product key={displayData.id} displayData={displayData}></Product>
+            <Product key={displayData._id} displayData={displayData}></Product>
           ))}
         </div>
         <div className="manage-btn text-center mt-5">

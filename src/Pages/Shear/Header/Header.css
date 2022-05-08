@@ -1,12 +1,10 @@
-.logo{
-    text-decoration: none;
+.logo {
+  text-decoration: none;
 }
-.logo-infro{
-    font-weight: 700;
-    margin-left: 10px;
+.logo-infro {
+  font-weight: 700;
+  margin-left: 10px;
 }
-.heaser-nav:hover{
-   border-bottom: 2px solid gray;
+.heaser-nav:hover {
+  border-bottom: 2px solid gray;
 }
-
-

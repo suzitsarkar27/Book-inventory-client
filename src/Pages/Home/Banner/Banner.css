@@ -1,38 +1,36 @@
-.banar{
-    background: url(../../../image/banner-bg.jpg) no-repeat; 
-    background-size: cover;
-    background-position: center;
-    
- }
- .banar{
-     padding: 5rem 9%;
- }
- .content{
-     flex: 1 1 42rem;
- }
- .book-slider{
-    flex: 1 1 42rem;
- text-align: center;
-    margin-top: 2rem;
- }
- .book-slider a img{
-     height:17rem;
-     transition: .5s;
- }
-.book-slider a:hover img{
-     transform: scale(.9);
- }
- .stand{
-   width: 100%;
-   margin-top:-1rem;
- }
- h3{
-     color: var(--light-color);
-     font-size: 4.5rem;
- }
- p{
-    color: var(--black);
-    font-size: 1.4rem;  
-    line-height:2; 
-
- }
+.banar {
+  background: url(../../../image/banner-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.banar {
+  padding: 5rem 9%;
+}
+.content {
+  flex: 1 1 42rem;
+}
+.book-slider {
+  flex: 1 1 42rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+.book-slider a img {
+  height: 17rem;
+  transition: 0.5s;
+}
+.book-slider a:hover img {
+  transform: scale(0.9);
+}
+.stand {
+  width: 100%;
+  margin-top: -1rem;
+}
+h3 {
+  color: var(--light-color);
+  font-size: 4.5rem;
+}
+p {
+  color: var(--black);
+  font-size: 1.4rem;
+  line-height: 2;
+}
