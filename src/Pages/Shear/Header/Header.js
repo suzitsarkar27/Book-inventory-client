@@ -37,36 +37,42 @@ const Header = () => {
             >
               Home
             </Nav.Link>
-            <Nav.Link
-              as={Link}
-              to={"/manageitems"}
-              className="heaser-nav"
-              href="#action2"
-            >
-              Manage Items
-            </Nav.Link>
-            <Nav.Link
-              as={Link}
-              to={"/additems"}
-              className="heaser-nav"
-              href="#home"
-            >
-              Add Items
-            </Nav.Link>
-            <Nav.Link
-              as={Link}
-              to={"/myitems"}
-              className="heaser-nav"
-              href="#link"
-            >
-              My Items
-            </Nav.Link>
+            {user && (
+              <>
+                <Nav.Link
+                  as={Link}
+                  to={"/manageitems"}
+                  className="heaser-nav"
+                  href="#action2"
+                >
+                  Manage Items
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to={"/additems"}
+                  className="heaser-nav"
+                  href="#home"
+                >
+                  Add Items
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to={"/myitems"}
+                  className="heaser-nav"
+                  href="#link"
+                >
+                  My Items
+                </Nav.Link>
+              </>
+            )}
+
             <Nav.Link
               as={Link}
               to={"/blogs"}
               className="heaser-nav"
               href="#link"
             >
+              {" "}
               Blogs
             </Nav.Link>
             {user ? (

@@ -5,7 +5,12 @@ import "./Manage.css";
 const Manage = () => {
   const { productId } = useParams();
   const [service, setService] = useState({});
-  const [quintity, setQuintity] = useState([]);
+  // const [quintity, setQuintity] = useState([]);
+
+  // const incriseCount = () => {
+  //   const newCount = quintity + 1;
+  //   setQuintity(newCount);
+  // };
 
   console.log(service);
   useEffect(() => {
@@ -14,6 +19,7 @@ const Manage = () => {
       .then((res) => res.json())
       .then((data) => setService(data));
   }, []);
+
   return (
     <div className="row manage-product mx-auto mb-5">
       <div className="col-md-6">

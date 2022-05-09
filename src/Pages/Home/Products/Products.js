@@ -1,22 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import useProsuct from "../../Hooks/useProduct";
 import Product from "../Product/Product";
 
 const Products = () => {
-  const [product, setProsuct] = useState([]);
-  console.log(product);
-  const data = product.slice(0, 6);
-  useEffect(() => {
-    fetch("http://localhost:5000/data")
-      .then((res) => res.json())
-      .then((data) => setProsuct(data));
-  }, []);
+  const [product] = useProsuct();
   return (
     <div className="container">
       <h2 className="mt-5 mb-5 text-center text-info">Inventory Product </h2>
       <div>
         <div className="row">
-          {data.map((displayData) => (
+          {product.map((displayData) => (
             <Product key={displayData._id} displayData={displayData}></Product>
           ))}
         </div>

@@ -1,15 +1,30 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import useProsuct from "../Hooks/useProduct";
 
 const AllProduct = ({ item }) => {
+  const [product, setProduct] = useProsuct();
   const { _id, name, price, image, quintity, discription } = item;
+
   const navigate = useNavigate();
+
   const handelNavigate = (id) => {
     navigate(`/product/${id}`);
   };
-  const handelDelete = () => {
+
+  const handelDelete = (id) => {
     const proceed = window.confirm("Are you Sure?");
     if (proceed) {
+      const url = `http://localhost:5000/data/${id}`;
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          const remaining = product.filter((servic) => servic._id !== id);
+          setProduct(remaining);
+        });
     }
   };
   return (

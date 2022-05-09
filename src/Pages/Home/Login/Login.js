@@ -10,6 +10,7 @@ import { toast, ToastContainer } from "react-toastify";
 import auth from "../../Firebase.init";
 import "react-toastify/dist/ReactToastify.css";
 import "./Login.css";
+import axios from "axios";
 const Login = () => {
   const emailRef = useRef("");
   const passwordRef = useRef("");
@@ -41,12 +42,14 @@ const Login = () => {
     errorElement = <p className="text-danger">Error: {error?.message}</p>;
   }
 
-  const handelSumbit = (e) => {
+  const handelSumbit = async (e) => {
     e.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
 
-    signInWithEmailAndPassword(email, password);
+    await signInWithEmailAndPassword(email, password);
+    const { data } = await axios.post("http://localhost:5000/login", { email });
+    console.log(data);
     console.log(email, password);
     navigate("/home");
   };
