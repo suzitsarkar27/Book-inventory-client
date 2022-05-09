@@ -23,7 +23,7 @@ const Product = (Props) => {
         </p>
         <button
           onClick={() => navigetToProductDatalic(_id)}
-          className="Product-btn "
+          className="Product-btn bg-success "
         >
           Update
         </button>

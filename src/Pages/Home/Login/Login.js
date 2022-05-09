@@ -49,7 +49,7 @@ const Login = () => {
 
     await signInWithEmailAndPassword(email, password);
     const { data } = await axios.post("http://localhost:5000/login", { email });
-    console.log(data);
+    localStorage.setItem("accessToken", data.accessToken);
     console.log(email, password);
     navigate("/home");
   };
