@@ -15,11 +15,11 @@ const Manage = () => {
     e.preventDefault();
     const newStock = parseInt(e.target.newStockValue.value);
     console.log(newStock);
-    const Quantity = newStock + existQuantity;
-    const newQuantity = { ...service, quantity: Quantity };
+    const quantity = newStock + existQuantity;
+    const newQuantity = { ...service, quantity: quantity };
     setService(newQuantity);
 
-    const url = `http://localhost:5000/data/${productId}`;
+    const url = `https://blooming-peak-90984.herokuapp.com/data/${productId}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -40,7 +40,7 @@ const Manage = () => {
     const newQuantity = { ...service, quantity: quantity };
     setService(newQuantity);
 
-    const url = `http://localhost:5000/data/${productId}`;
+    const url = `https://blooming-peak-90984.herokuapp.com/data/${productId}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -82,7 +82,7 @@ const Manage = () => {
                 type="number"
               />
               <input
-                className="btn btn-info text-white mt-4 "
+                className="btn btn-info text-white ms-3 "
                 type="submit"
                 value={"Restock"}
               />

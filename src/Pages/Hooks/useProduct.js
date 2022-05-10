@@ -4,7 +4,7 @@ const useProsuct = () => {
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/data")
+    fetch("https://blooming-peak-90984.herokuapp.com/data")
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, []);

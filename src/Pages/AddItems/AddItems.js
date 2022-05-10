@@ -1,13 +1,21 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import logo from "../../image/login.png";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../Firebase.init";
 import "./AddItems.css";
 
 const AddItems = () => {
   const { register, handleSubmit } = useForm();
+  const [user, loading, error] = useAuthState(auth);
+
+  if (user) {
+    console.log(user.email);
+  }
+
   const onSubmit = (data) => {
     console.log(data);
-    const url = `http://localhost:5000/data`;
+    const url = `https://blooming-peak-90984.herokuapp.com/data`;
     fetch(url, {
       method: "POST",
       headers: {

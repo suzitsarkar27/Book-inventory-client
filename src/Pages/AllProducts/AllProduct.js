@@ -4,6 +4,7 @@ import useProsuct from "../Hooks/useProduct";
 
 const AllProduct = ({ item }) => {
   const [product, setProduct] = useProsuct();
+  console.log(product.name);
   const { _id, name, price, image, quintity, discription } = item;
 
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ const AllProduct = ({ item }) => {
   const handelDelete = (id) => {
     const proceed = window.confirm("Are you Sure?");
     if (proceed) {
-      const url = `http://localhost:5000/data/${id}`;
+      const url = `https://blooming-peak-90984.herokuapp.com/data/${id}`;
       fetch(url, {
         method: "DELETE",
       })
