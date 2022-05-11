@@ -7,17 +7,18 @@ import "./Manage.css";
 const Manage = () => {
   const { productId } = useParams();
   const [service, setService] = useUpdateData(productId);
-  const { quantity } = service;
+  const { quintity } = service;
+  console.log(service);
 
-  let existQuantity = parseInt(quantity);
+  let existquintity = parseInt(quintity);
 
-  const increaseQuantity = (e) => {
+  const increasequintity = (e) => {
     e.preventDefault();
     const newStock = parseInt(e.target.newStockValue.value);
     console.log(newStock);
-    const quantity = newStock + existQuantity;
-    const newQuantity = { ...service, quantity: quantity };
-    setService(newQuantity);
+    const quintity = newStock + existquintity;
+    const newquintity = { ...service, quintity: quintity };
+    setService(newquintity);
 
     const url = `https://blooming-peak-90984.herokuapp.com/data/${productId}`;
     fetch(url, {
@@ -25,7 +26,7 @@ const Manage = () => {
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(newQuantity),
+      body: JSON.stringify(newquintity),
     })
       .then((res) => res.json())
       .then((result) => {
@@ -33,12 +34,12 @@ const Manage = () => {
       });
   };
 
-  // decrease quantity
+  // decrease quintity
 
-  const decreaseQuantity = () => {
-    const quantity = existQuantity - 1;
-    const newQuantity = { ...service, quantity: quantity };
-    setService(newQuantity);
+  const decreasequintity = () => {
+    const quintity = existquintity - 1;
+    const newquintity = { ...service, quintity: quintity };
+    setService(newquintity);
 
     const url = `https://blooming-peak-90984.herokuapp.com/data/${productId}`;
     fetch(url, {
@@ -46,7 +47,7 @@ const Manage = () => {
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(newQuantity),
+      body: JSON.stringify(newquintity),
     })
       .then((res) => res.json())
       .then((result) => {
@@ -69,12 +70,12 @@ const Manage = () => {
         <div>
           <button
             className="ms-5 mt-2 mb-3 btn btn-danger"
-            onClick={decreaseQuantity}
+            onClick={decreasequintity}
           >
             Delivered
           </button>
 
-          <form onSubmit={increaseQuantity}>
+          <form onSubmit={increasequintity}>
             <div className="input-group">
               <input
                 className="form-control w-50"
