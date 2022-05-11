@@ -8,18 +8,19 @@ const Manage = () => {
   const { productId } = useParams();
   const [service, setService] = useUpdateData(productId);
   const { quintity } = service;
-  console.log(service);
+  console.log(quintity);
 
-  let existquintity = parseInt(quintity);
+  const existquintity = parseInt(quintity);
 
   const increasequintity = (e) => {
     e.preventDefault();
     const newStock = parseInt(e.target.newStockValue.value);
     console.log(newStock);
-    const quintity = newStock + existquintity;
+    const quintity = parseInt(newStock + existquintity);
     const newquintity = { ...service, quintity: quintity };
     setService(newquintity);
 
+    console.log(productId, newquintity, quintity);
     const url = `https://blooming-peak-90984.herokuapp.com/data/${productId}`;
     fetch(url, {
       method: "PUT",
@@ -37,7 +38,7 @@ const Manage = () => {
   // decrease quintity
 
   const decreasequintity = () => {
-    const quintity = existquintity - 1;
+    const quintity = parseInt(existquintity - 1);
     const newquintity = { ...service, quintity: quintity };
     setService(newquintity);
 

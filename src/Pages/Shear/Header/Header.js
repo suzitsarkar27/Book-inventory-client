@@ -8,6 +8,7 @@ import auth from "../../Firebase.init";
 import "./Header.css";
 const Header = () => {
   const [user] = useAuthState(auth);
+  console.log(user);
   const hanselSingOut = () => {
     signOut(auth);
   };
@@ -28,7 +29,6 @@ const Header = () => {
               style={{ maxHeight: "100px" }}
               navbarScroll
             ></Nav>
-
             <Nav.Link
               as={Link}
               to={"/home"}
@@ -65,7 +65,6 @@ const Header = () => {
                 </Nav.Link>
               </>
             )}
-
             <Nav.Link
               as={Link}
               to={"/blogs"}
@@ -75,13 +74,31 @@ const Header = () => {
               {" "}
               Blogs
             </Nav.Link>
+            <Nav.Link
+              as={Link}
+              to={"/about"}
+              className="heaser-nav"
+              href="#link"
+            >
+              {" "}
+              About{" "}
+            </Nav.Link>
             {user ? (
-              <button
-                className="bg-danger rounded text-white"
-                onClick={hanselSingOut}
-              >
-                Sing Out
-              </button>
+              <span>
+                <img
+                  height={50}
+                  className="rounded-circle me-2"
+                  src={user.photoURL}
+                  alt=""
+                />
+                <span className="text-primary"> {user.displayName}</span>
+                <button
+                  className="bg-danger rounded ms-2 text-white"
+                  onClick={hanselSingOut}
+                >
+                  Sing Out
+                </button>
+              </span>
             ) : (
               <Nav.Link
                 className="heaser-nav"

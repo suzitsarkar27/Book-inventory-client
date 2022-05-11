@@ -10,10 +10,8 @@ const ManageItems = () => {
   return (
     <div>
       <h2 className="text-center mt-5 text-primary">All Product Items</h2>
-      <div className="row mb-5">
-        {product.map((item) => (
-          <AllProduct key={item._id} item={item}></AllProduct>
-        ))}
+      <div className=" mb-5">
+        <AllProduct></AllProduct>
       </div>
     </div>
   );

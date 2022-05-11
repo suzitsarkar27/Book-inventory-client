@@ -13,6 +13,7 @@ import MyItems from "./Pages/MyItems/MyItems";
 import Manage from "./Pages/Home/Manage/Manage";
 import NotFund from "./Pages/Home/NotFound/NotFund";
 import Blogs from "./Pages/Blogs/Blogs";
+import About from "./Pages/About/About";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           }
         ></Route>
         <Route path="blogs" element={<Blogs></Blogs>}></Route>
+        <Route path="about" element={<About></About>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/singup" element={<SingUp></SingUp>}></Route>
         <Route path="*" element={<NotFund></NotFund>}></Route>

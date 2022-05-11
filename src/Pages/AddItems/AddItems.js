@@ -4,6 +4,7 @@ import logo from "../../image/login.png";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../Firebase.init";
 import "./AddItems.css";
+import Loding from "../Loding/Loding";
 
 const AddItems = () => {
   const { register, handleSubmit } = useForm();
@@ -12,6 +13,9 @@ const AddItems = () => {
   if (user) {
     console.log(user.email);
   }
+  if (loading) {
+    <Loding></Loding>;
+  }
 
   const onSubmit = (data) => {
     console.log(data);
@@ -19,6 +23,7 @@ const AddItems = () => {
     fetch(url, {
       method: "POST",
       headers: {
+        authorization: `${user.email} ${localStorage.getItem("accessToken")}`,
         "content-type": "application/json",
       },
       body: JSON.stringify(data),

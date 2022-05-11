@@ -2,10 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import useProsuct from "../Hooks/useProduct";
 
-const AllProduct = ({ item }) => {
+const AllProduct = () => {
   const [product, setProduct] = useProsuct();
-  console.log(product.name);
-  const { _id, name, price, image, quintity, discription } = item;
 
   const navigate = useNavigate();
 
@@ -29,26 +27,36 @@ const AllProduct = ({ item }) => {
     }
   };
   return (
-    <div className="col-md-6 col-lg-4 g-5">
-      <div className="product-container text-center">
-        <img className="product-img mb-1" src={image} alt="" />
-        <p className="Product-infro ">
-          <h4>{name}</h4>
-          <h4>Price:{price}</h4>
-          <h5>Quintity:{quintity}</h5>
-        </p>
-        <p className=" fs-5">
-          <small>{discription}</small>
-        </p>
-        <div className="d-flex justify-content-around">
-          <button onClick={() => handelNavigate(_id)} className="manage-btn">
-            Manag
-          </button>
-          <button className="delete-btn" onClick={() => handelDelete(_id)}>
-            Delete
-          </button>
+    <div className="row container">
+      {product.map((pro) => (
+        <div className="col-md-6 col-lg-4 g-5">
+          <div className="product-container text-center">
+            <img className="product-img mb-1" src={pro.image} alt="" />
+            <p className="Product-infro ">
+              <h4>{pro.name}</h4>
+              <h4>Price:{pro.price}</h4>
+              <h5>Quintity:{pro.quintity}</h5>
+            </p>
+            <p className=" fs-5">
+              <small>{pro.discription}</small>
+            </p>
+            <div className="d-flex justify-content-around">
+              <button
+                onClick={() => handelNavigate(pro._id)}
+                className="manage-btn"
+              >
+                Manag
+              </button>
+              <button
+                className="delete-btn"
+                onClick={() => handelDelete(pro._id)}
+              >
+                Delete
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
+      ))}
     </div>
   );
 };

@@ -5,12 +5,13 @@ import Product from "../Product/Product";
 
 const Products = () => {
   const [product] = useProsuct();
+  const products = product.slice(0, 6);
   return (
     <div className="container">
       <h2 className="mt-5 mb-5 text-center text-info">Inventory Product </h2>
       <div>
         <div className="row">
-          {product.map((displayData) => (
+          {products.map((displayData) => (
             <Product key={displayData._id} displayData={displayData}></Product>
           ))}
         </div>
