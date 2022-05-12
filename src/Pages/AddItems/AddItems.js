@@ -47,8 +47,8 @@ const AddItems = () => {
           <label for="suplay">Supply Name:</label>
           <input type="name" {...register("supplyName")} required />
 
-          <label for="email">Email:</label>
-          <input type="email" {...register("email")} required />
+          {/* <label for="email">Email:</label> */}
+          {/* <input type="email" value={user.email} {...register} required /> */}
 
           <label for="price">Price:</label>
           <input type="number" {...register("price")} required />
