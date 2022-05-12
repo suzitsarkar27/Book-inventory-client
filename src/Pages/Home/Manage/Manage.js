@@ -8,7 +8,6 @@ const Manage = () => {
   const { productId } = useParams();
   const [service, setService] = useUpdateData(productId);
   const { quintity } = service;
-  console.log(quintity);
 
   const existquintity = parseInt(quintity);
 
