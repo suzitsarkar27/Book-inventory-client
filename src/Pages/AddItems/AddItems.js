@@ -5,33 +5,30 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../Firebase.init";
 import "./AddItems.css";
 import Loding from "../Loding/Loding";
+import { toast, ToastContainer } from "react-toastify";
 
 const AddItems = () => {
   const { register, handleSubmit } = useForm();
   const [user, loading, error] = useAuthState(auth);
 
-  if (user) {
-    console.log(user.email);
-  }
   if (loading) {
     <Loding></Loding>;
   }
 
   const onSubmit = (data) => {
+    const proceed = toast("data success");
     console.log(data);
-    const url = `https://blooming-peak-90984.herokuapp.com/data`;
-    fetch(url, {
-      method: "POST",
-      headers: {
-        authorization: `${user.email} ${localStorage.getItem("accessToken")}`,
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((result) => {
-        console.log(result);
-      });
+    if (proceed) {
+      const url = `https://blooming-peak-90984.herokuapp.com/data`;
+      fetch(url, {
+        method: "POST",
+        body: JSON.stringify(data),
+      })
+        .then((res) => res.json())
+        .then((result) => {
+          console.log(result);
+        });
+    }
   };
   return (
     <div className="react-from row mx-auto mt-5 mb-5 p-3">
@@ -65,6 +62,7 @@ const AddItems = () => {
           <input className="mt-4 bg-primary rounded text-white" type="submit" />
         </form>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

@@ -31,23 +31,8 @@ const Login = () => {
   }
 
   if (user) {
-    const url = `https://blooming-peak-90984.herokuapp.com/login`;
-
-    fetch(url, {
-      method: "POST",
-      body: JSON.stringify({
-        email: user.email,
-      }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        localStorage.setItem("accessToken", data.token);
-        // navigate((from, { replace: true }));
-        navigate("/home");
-      });
+    navigate((from, { replace: true }));
+    navigate("/home");
   }
 
   if (error) {

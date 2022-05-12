@@ -5,13 +5,14 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import logo from "../../../image/loader-img.gif";
 import auth from "../../Firebase.init";
+import Login from "../../Home/Login/Login";
 import "./Header.css";
 const Header = () => {
-  const [user] = useAuthState(auth);
-  console.log(user);
+  const [user, loading] = useAuthState(auth);
   const hanselSingOut = () => {
     signOut(auth);
   };
+
   return (
     <div className="sticky-top">
       <Navbar className="ps-5 pe-5 text-center " bg="light" expand="lg">

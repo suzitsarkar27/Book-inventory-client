@@ -1,18 +1,17 @@
 import { async } from "@firebase/util";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Toast } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Navigate } from "react-router-dom";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import auth from "../Firebase.init";
-import useProsuct from "../Hooks/useProduct";
 import "./MyItems.css";
 
 const MyItems = () => {
   const [user] = useAuthState(auth);
   const [useItem, setUseItem] = useState([]);
   console.log(useItem.name);
-  // const [product, setProduct] = useProsuct();
 
   useEffect(() => {
     const allItem = async () => {
@@ -34,6 +33,7 @@ const MyItems = () => {
 
   const handelDelete = (id) => {
     const proceed = window.confirm("Are you Sure?");
+
     if (proceed) {
       const url = `https://blooming-peak-90984.herokuapp.com/data/${id}`;
       fetch(url, {
@@ -80,6 +80,7 @@ const MyItems = () => {
           </div>
         </div>
       ))}
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

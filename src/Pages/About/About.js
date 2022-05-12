@@ -3,11 +3,11 @@ import logo from "../../image/suzit.jpg";
 
 const About = () => {
   return (
-    <div className=" bg-danger mx-auto mt-5 row">
-      <div className="col-md-4 mt-5">
-        <img className="mx-auto rounded" src={logo} alt="" />
+    <div className=" mx-auto mt-5 row">
+      <div className="col-md-5 mt-5">
+        <img className="mx-auto rounded mb-5" src={logo} alt="" />
       </div>
-      <div className="col-md-8 mt-5">
+      <div className="col-md-7">
         <h2 className="text-center mb-5">About Myself</h2>
         <h2>Degine & Developer By : Suzit Sarkar </h2>
         <p>
