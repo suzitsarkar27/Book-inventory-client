@@ -16,19 +16,19 @@ const AddItems = () => {
   }
 
   const onSubmit = (data) => {
-    const proceed = toast("data success");
     console.log(data);
-    if (proceed) {
-      const url = `https://blooming-peak-90984.herokuapp.com/data`;
-      fetch(url, {
-        method: "POST",
-        body: JSON.stringify(data),
-      })
-        .then((res) => res.json())
-        .then((result) => {
-          console.log(result);
-        });
-    }
+    const url = `https://blooming-peak-90984.herokuapp.com/data`;
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result);
+      });
   };
   return (
     <div className="react-from row mx-auto mt-5 mb-5 p-3">
@@ -62,7 +62,6 @@ const AddItems = () => {
           <input className="mt-4 bg-primary rounded text-white" type="submit" />
         </form>
       </div>
-      <ToastContainer></ToastContainer>
     </div>
   );
 };
