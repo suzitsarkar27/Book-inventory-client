@@ -13,7 +13,7 @@ const MyItems = () => {
 
   useEffect(() => {
     const getItem = async () => {
-      const email = user?.user?.email;
+      const email = user?.email;
       const url = `https://blooming-peak-90984.herokuapp.com/data`;
       console.log(email);
       const { data } = await axios.get(url);
