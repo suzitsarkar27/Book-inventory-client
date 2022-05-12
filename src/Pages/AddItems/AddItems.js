@@ -43,25 +43,18 @@ const AddItems = () => {
         <form className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
           <label for="name">Product Name:</label>
           <input type="name" {...register("name")} required />
-
           <label for="suplay">Supply Name:</label>
           <input type="name" {...register("supplyName")} required />
-
-          {/* <label for="email">Email:</label> */}
-          {/* <input type="email" value={user.email} {...register} required /> */}
-
+          <label for="email">Email:</label>
+          <input type="email" value={user.email} {...register} required />
           <label for="price">Price:</label>
           <input type="number" {...register("price")} required />
-
           <label for="quantity">Quantity:</label>
           <input type="number" {...register("quintity")} required />
-
           <label for="img">Image:</label>
           <input type="img" {...register("image")} required />
-
           <label for="description">Discription:</label>
           <textarea type="text" {...register("discription")} required />
-
           <input className="mt-4 bg-primary rounded text-white" type="submit" />
         </form>
       </div>

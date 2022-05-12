@@ -3,8 +3,9 @@
   border: 1px solid lightgray;
   border-radius: 8px;
 }
-.react-from input {
+.react-from input ,textarea{
   margin-bottom: 20px;
+  width:300px;
 }
 .logo-img {
   width: 400px;

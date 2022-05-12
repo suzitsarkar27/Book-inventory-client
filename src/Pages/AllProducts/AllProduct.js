@@ -27,12 +27,12 @@ const AllProduct = () => {
     }
   };
   return (
-    <div className="row container">
+    <div className="row ">
       {product.map((pro) => (
-        <div className="col-md-6 col-lg-4 g-5">
+        <div className="col-12 col-md-6 col-lg-4 col-xl-3 g-5">
           <div className="product-container text-center">
             <img className="product-img mb-1" src={pro.image} alt="" />
-            <p className="Product-infro ">
+            <p className="Product-infro mt-2 ">
               <h4>{pro.name}</h4>
               <h4>Price:{pro.price}</h4>
               <h5>Quintity:{pro.quintity}</h5>
