@@ -1,9 +1,9 @@
 
 
  * It is a book inventory website that stores all kinds of books.
- * 
- *  Home Manage Items, Added Items, My Items, Blogs are available in the Neb Bar. Users will not be able to enter Managed Items, Added Items, My     Items without login.
- *  
+  
+ *  Home Manage Items, Added Items, My Items, Blogs are available in the Neb Bar. Users will not be able to enter Managed Items, Added Items, My     Items without login
+   
  * The home page shows 8 products and has a footer.
 
  * Manage Items contains all the products, and the product has data and manage, and delete buttons.
