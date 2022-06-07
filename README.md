@@ -1,18 +1,18 @@
 
 
-   * এটি একটি বুক ইনবেন্টরি ওয়েবসাইট সকল ধরনের বই স্টোর করে রাখা হয় ।
+ * It is a book inventory website that stores all kinds of books.
+ * 
+ *  Home Manage Items, Added Items, My Items, Blogs are available in the Neb Bar. Users will not be able to enter Managed Items, Added Items, My     Items without login.
+ *  
+ * The home page shows 8 products and has a footer.
 
-  * নেব বারের মধ্যে হোম ম্যানেজ আইটেমস ,আড্ড আইটেম ,মাই আইটেম ,ব্লগ রেয়েচ্ছে ।ইউজার লগইন ছারা ম্যানেজ আইটেমস ,আড্ড আইটেম ,মাই আইটেম
-       এ ডুক্তে পারবে না ।
-  
-  * হোম পেইজে ৬ টি প্রডাক্ট দেখানো হয়েচ্ছে এবং ফুটার রয়েছে ।
+ * Manage Items contains all the products, and the product has data and manage, and delete buttons.
 
- * ম্যানেজ আইটেমস এ সকল প্রডাক্ট রেয়েচ্ছে ,এবং প্রডাক্ট এর ডাটা এবং ম্যানেজ ,আর ডিলিট বাটন রয়েছে । 
+ * Added Items has a form where new products can be added.
 
- * আড্ড আইটেস এ একটি ফর্ম রয়েচ্ছে যেখানে নতুন প্রডাক্ট আড্ড করা যায় ।
+ * My Item users will be able to see the products they have ordered.
 
- * মাই আইটেম ইউজার যে প্রডাক্ট গুলো অডার করবে সেগুলো দেখতে পারবে ।
-
- * ব্লকস বাটনে কিছু প্রশ্নের উত্তর দেওয়া হয়েছে ।
+ * Some questions have been answered on the blocks button stack overflo.
+ * 
 stack overflo question:https://stackoverflow.com/a/72117360/18100052
  
