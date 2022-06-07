@@ -2,7 +2,7 @@
 
  * It is a book inventory website that stores all kinds of books.
   
- *  Home Manage Items, Added Items, My Items, Blogs are available in the Neb Bar. Users will not be able to enter Managed Items, Added Items, My     Items without login
+  *  Home Manage Items, Added Items, My Items, Blogs are available in the Neb Bar. Users will not be able to enter Managed Items,        Added Items, My  Items without login
    
  * The home page shows 8 products and has a footer.
 
@@ -13,6 +13,10 @@
  * My Item users will be able to see the products they have ordered.
 
  * Some questions have been answered on the blocks button stack overflo.
- * 
+ 
+ * Anyone can update stock or get items upon signup/signing.
+
+* Users can add items and also delete items.
+
 stack overflo question:https://stackoverflow.com/a/72117360/18100052
  
